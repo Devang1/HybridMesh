@@ -1,0 +1,72 @@
+{
+  "expo": {
+    "name": "MeshLink",
+    "slug": "meshlink-expo",
+    "scheme": "meshlink",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0B0B0D"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.meshlink.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "MeshLink uses location for emergency alerts, safe zones, and nearby user maps.",
+        "NSMicrophoneUsageDescription": "MeshLink records voice notes for chat messages.",
+        "NSContactsUsageDescription": "MeshLink syncs contacts to show friends already on the platform.",
+        "NSPhotoLibraryUsageDescription": "MeshLink lets you share photos and videos in chats."
+      }
+    },
+    "android": {
+      "package": "com.meshlink.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0B0B0D"
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "RECORD_AUDIO",
+        "VIBRATE",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-notifications",
+        {
+          "color": "#3B82F6"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow MeshLink to use location for emergency features."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0B0B0D"
+        }
+      ],
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "local-development"
+      }
+    }
+  }
+}
